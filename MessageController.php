@@ -11,8 +11,7 @@ class MessageController{
 					$text = $event['message']['text'];
 					$replyToken = $event['replyToken'];
 					$json_output=json_decode($text,true);
-					$status=strpos($json_output,'hi');
-					if($status!==FALSE){
+					if(strpos($json_output,'hi')!==FALSE){
 						$textSend="Hello";
 					}else{
 						$textSend="ฉันไม่รู้จัก";
